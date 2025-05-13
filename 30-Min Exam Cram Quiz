@@ -1,0 +1,206 @@
+### 🔹 SECTION 1: BASIC (Warm-up – 1 mark each)
+
+**1.** What does TCP stand for?
+**2.** Which protocol is faster but less reliable than TCP?
+**3.** In which Java layer are remote objects created in RMI?
+**4.** What does IPC stand for?
+**5.** Name any one fallacy of distributed computing.
+
+---
+
+### 🔸 SECTION 2: CORE CONCEPTS (3 marks each)
+
+**6.** What's the main difference between connection-based and connection-less communication?
+
+**7.** Define “object serialization” and explain its purpose in distributed systems.
+
+**8.** What are the 3 roles of a connection socket?
+
+**9.** What’s the purpose of the RMI registry?
+
+**10.** Explain the difference between stateful and stateless servers using real-world examples.
+
+**11.** How does Java’s `wait()` and `notify()` system work in threading?
+
+**12.** What is a race condition and how do you prevent it?
+
+**13.** Explain the difference between method-level and block-level thread synchronisation in Java.
+
+**14.** What does the Java Virtual Machine (JVM) do?
+
+**15.** What is a stub in RMI and why is it important?
+
+---
+
+### 🔺 SECTION 3: CHALLENGERS (5 marks each)
+
+**16.** You’re asked to compare RMI and socket-based communication. Give 3 key differences.
+
+**17.** List 4 major challenges in distributed computing and give a real solution to each.
+
+**18.** Draw (or describe) the Java thread lifecycle.
+
+**19.** Using pseudocode, show how to register a remote object in RMI.
+
+**20.** Explain how a browser gets a web page from a server, starting from typing the URL.
+
+---
+
+### 💡 BONUS LIGHTNING ROUND (1 mark each – quick fire)
+
+**21.** What port does HTTP use?
+**22.** What does "marshalling" mean?
+**23.** What are the 4 layers of Internet architecture?
+**24.** What’s the difference between a thread and a process?
+**25.** What is a surrogate server?
+
+---
+
+### ✅ ANSWERS KEY (For self-marking – reveal after trying!)
+
+Brilliant, Tom – here are the **answers + fast-track explanations** to your **30-Min Cram Quiz**. Mark yourself honestly so we can target weak spots after.
+
+---
+
+### 🔹 SECTION 1: BASIC (1 mark each)
+
+**1.** **Transmission Control Protocol**
+🧠 *Reliable, connection-based protocol.*
+
+**2.** **UDP (User Datagram Protocol)**
+🧠 *Faster, no delivery guarantee.*
+
+**3.** **Server layer**
+🧠 *Remote objects live on the server in RMI.*
+
+**4.** **Inter-Process Communication**
+🧠 *How different processes talk to each other.*
+
+**5.** *Examples: “The network is secure” or “Latency is zero”*
+🧠 *These fallacies cause blind assumptions.*
+
+**Score out of 5: \_\_\_**
+
+---
+
+### 🔸 SECTION 2: CORE CONCEPTS (3 marks each)
+
+**6.**
+**Connection-based (TCP)** = Setup required, reliable, slower.
+**Connection-less (UDP)** = No setup, fast, but unreliable.
+🧠 *TCP is like a phone call, UDP is like throwing leaflets.*
+
+**7.**
+**Object Serialization** = Converting objects into byte streams so they can be sent over the network.
+🧠 *Think of packaging a toy in a box to ship it.*
+
+**8.**
+
+1. Accept connection
+2. Send data
+3. Receive data
+   🧠 *It’s the phone line between client and server.*
+
+**9.**
+The **RMI Registry** is a name directory where clients look up remote services by name.
+🧠 *Like calling a business from the phonebook.*
+
+**10.**
+**Stateless** = Doesn’t track user (e.g., Google homepage).
+**Stateful** = Tracks session info (e.g., online shopping cart).
+🧠 *Stateless forgets you, Stateful remembers you.*
+
+**11.**
+`wait()` pauses a thread until it gets a `notify()` call.
+🧠 *Like putting your hand up and waiting until the teacher calls your name.*
+
+**12.**
+**Race condition**: Two threads try to access/change data at the same time → chaos.
+Fix: Use `synchronized` keyword to lock code sections.
+
+**13.**
+**Method-level sync**: Lock the whole method.
+**Block-level sync**: Lock only part of the method.
+🧠 *Block-level is more flexible and efficient.*
+
+**14.**
+**JVM** = Converts Java bytecode into machine code at runtime.
+🧠 *It’s the translator between Java and your PC.*
+
+**15.**
+**Stub**: A local object acting as a stand-in for the real remote object.
+🧠 *It’s the client’s “fake” object that forwards calls to the server.*
+
+**Score out of 30: \_\_\_**
+
+---
+
+### 🔺 SECTION 3: CHALLENGERS (5 marks each)
+
+**16.**
+
+| Feature     | RMI                          | Socket            |
+| ----------- | ---------------------------- | ----------------- |
+| Abstraction | High-level (methods/objects) | Low-level (bytes) |
+| Ease of Use | Easier                       | More manual       |
+| Data Format | Uses serialized objects      | Raw input/output  |
+
+**17.**
+
+| Challenge   | Solution                       |
+| ----------- | ------------------------------ |
+| Latency     | Caching, local replicas        |
+| Failure     | Redundant servers, monitoring  |
+| Concurrency | Thread pools, locks            |
+| Security    | SSL, authentication, firewalls |
+
+**18.**
+**Thread States**:
+
+* **New** – created but not started
+* **Runnable** – ready to run
+* **Running** – currently executing
+* **Waiting/Blocked** – paused
+* **Terminated** – finished
+
+**19.**
+
+```java
+MyRemote obj = new MyRemoteImpl();
+Naming.rebind("myService", obj);
+```
+
+🧠 *Steps: Start registry → Create object → Bind it with name.*
+
+**20.**
+
+* User types URL → Browser uses DNS to get IP
+* Sends **HTTP request** over TCP
+* IP routes it through **Internet Layer**
+* TCP ensures it gets there
+* Web server processes and sends back page
+* Browser renders the response
+
+**Score out of 25: \_\_\_**
+
+---
+
+### 💡 BONUS LIGHTNING ROUND (1 mark each)
+
+**21.** **Port 80**
+**22.** *Encoding objects for transmission*
+**23.** *Network Access, Internet, Transport, Application*
+**24.** *Thread = lightweight, shares memory; Process = heavyweight, isolated*
+**25.** *Acts as an intermediary between client and actual server*
+
+**Score out of 5: \_\_\_**
+
+---
+
+### ✅ TOTAL SCORE: \_\_\_ / 65
+
+Let me know:
+
+* Where you struggled and I’ll drill down on that topic.
+* If you want a **printable version**, or **flashcard revision set** next.
+  You're nearly there, brother. 9:15 tomorrow – let’s finish strong.
