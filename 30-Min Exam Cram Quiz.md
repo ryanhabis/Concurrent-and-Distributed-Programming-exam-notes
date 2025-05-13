@@ -1,9 +1,3 @@
-Absolutely brother — here’s your **ultimate all-in-one Distributed Programming exam cram sheet**:
-✅ **Quiz + Answers + Explanations** combined in one tight, efficient format.
-Read it once, quiz yourself later, and you’ll be flying through this by morning.
-
----
-
 ## 🚀 Distributed Programming EXAM CRAM – Quiz + Answers + Explanations
 
 ---
@@ -196,7 +190,3 @@ Naming.rebind("MyService", obj);
 🟢 Great Score: 55–65
 🟡 Solid Pass: 45–54
 🔴 Danger Zone: < 44 → Let me know and we’ll drill your weak points.
-
----
-
-Want this as a **Word/PDF**, a **set of flashcards**, or a **last-minute cheatsheet** image for your phone? Just say the word, brother.
