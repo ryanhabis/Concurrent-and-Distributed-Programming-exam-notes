@@ -1,206 +1,202 @@
-### 🔹 SECTION 1: BASIC (Warm-up – 1 mark each)
+Absolutely brother — here’s your **ultimate all-in-one Distributed Programming exam cram sheet**:
+✅ **Quiz + Answers + Explanations** combined in one tight, efficient format.
+Read it once, quiz yourself later, and you’ll be flying through this by morning.
 
-**1.** What does TCP stand for?
-**2.** Which protocol is faster but less reliable than TCP?
-**3.** In which Java layer are remote objects created in RMI?
-**4.** What does IPC stand for?
-**5.** Name any one fallacy of distributed computing.
+---
+
+## 🚀 Distributed Programming EXAM CRAM – Quiz + Answers + Explanations
+
+---
+
+### 🔹 SECTION 1: BASICS (1 mark each)
+
+**1. What does TCP stand for?**
+✅ **Transmission Control Protocol**
+➡️ *A reliable, connection-based protocol for sending data over networks.*
+
+**2. Which protocol is faster but less reliable than TCP?**
+✅ **UDP (User Datagram Protocol)**
+➡️ *It skips handshakes to send data faster — but doesn’t guarantee delivery.*
+
+**3. In which Java layer are remote objects created in RMI?**
+✅ **Server layer**
+➡️ *Remote objects are instantiated and hosted on the server side.*
+
+**4. What does IPC stand for?**
+✅ **Inter-Process Communication**
+➡️ *It’s how different programs (processes) talk to each other.*
+
+**5. Name any one fallacy of distributed computing.**
+✅ *“The network is secure” or “Latency is zero”*
+➡️ *These wrong assumptions cause system design flaws.*
 
 ---
 
 ### 🔸 SECTION 2: CORE CONCEPTS (3 marks each)
 
-**6.** What's the main difference between connection-based and connection-less communication?
-
-**7.** Define “object serialization” and explain its purpose in distributed systems.
-
-**8.** What are the 3 roles of a connection socket?
-
-**9.** What’s the purpose of the RMI registry?
-
-**10.** Explain the difference between stateful and stateless servers using real-world examples.
-
-**11.** How does Java’s `wait()` and `notify()` system work in threading?
-
-**12.** What is a race condition and how do you prevent it?
-
-**13.** Explain the difference between method-level and block-level thread synchronisation in Java.
-
-**14.** What does the Java Virtual Machine (JVM) do?
-
-**15.** What is a stub in RMI and why is it important?
+**6. What’s the main difference between connection-based and connection-less communication?**
+✅ **Connection-based** (TCP) = Requires a connection, reliable
+✅ **Connection-less** (UDP) = No connection needed, fast but unreliable
+➡️ *TCP = Phone call, UDP = Sending a flyer by wind.*
 
 ---
 
-### 🔺 SECTION 3: CHALLENGERS (5 marks each)
-
-**16.** You’re asked to compare RMI and socket-based communication. Give 3 key differences.
-
-**17.** List 4 major challenges in distributed computing and give a real solution to each.
-
-**18.** Draw (or describe) the Java thread lifecycle.
-
-**19.** Using pseudocode, show how to register a remote object in RMI.
-
-**20.** Explain how a browser gets a web page from a server, starting from typing the URL.
+**7. Define “object serialization” and explain its purpose.**
+✅ **Serialization** = Turning an object into bytes for network transfer
+➡️ *It lets full Java objects be sent over sockets or stored for reuse.*
 
 ---
 
-### 💡 BONUS LIGHTNING ROUND (1 mark each – quick fire)
-
-**21.** What port does HTTP use?
-**22.** What does "marshalling" mean?
-**23.** What are the 4 layers of Internet architecture?
-**24.** What’s the difference between a thread and a process?
-**25.** What is a surrogate server?
-
----
-
-### ✅ ANSWERS KEY (For self-marking – reveal after trying!)
-
-Brilliant, Tom – here are the **answers + fast-track explanations** to your **30-Min Cram Quiz**. Mark yourself honestly so we can target weak spots after.
-
----
-
-### 🔹 SECTION 1: BASIC (1 mark each)
-
-**1.** **Transmission Control Protocol**
-🧠 *Reliable, connection-based protocol.*
-
-**2.** **UDP (User Datagram Protocol)**
-🧠 *Faster, no delivery guarantee.*
-
-**3.** **Server layer**
-🧠 *Remote objects live on the server in RMI.*
-
-**4.** **Inter-Process Communication**
-🧠 *How different processes talk to each other.*
-
-**5.** *Examples: “The network is secure” or “Latency is zero”*
-🧠 *These fallacies cause blind assumptions.*
-
-**Score out of 5: \_\_\_**
-
----
-
-### 🔸 SECTION 2: CORE CONCEPTS (3 marks each)
-
-**6.**
-**Connection-based (TCP)** = Setup required, reliable, slower.
-**Connection-less (UDP)** = No setup, fast, but unreliable.
-🧠 *TCP is like a phone call, UDP is like throwing leaflets.*
-
-**7.**
-**Object Serialization** = Converting objects into byte streams so they can be sent over the network.
-🧠 *Think of packaging a toy in a box to ship it.*
-
-**8.**
+**8. What are the 3 roles of a connection socket?**
+✅
 
 1. Accept connection
 2. Send data
 3. Receive data
-   🧠 *It’s the phone line between client and server.*
+   ➡️ *Think of it like a phone: pick up, speak, listen.*
 
-**9.**
-The **RMI Registry** is a name directory where clients look up remote services by name.
-🧠 *Like calling a business from the phonebook.*
+---
 
-**10.**
-**Stateless** = Doesn’t track user (e.g., Google homepage).
-**Stateful** = Tracks session info (e.g., online shopping cart).
-🧠 *Stateless forgets you, Stateful remembers you.*
+**9. What’s the purpose of the RMI registry?**
+✅ **It maps names to remote objects.**
+➡️ *Clients find and connect to services using names — like a phonebook.*
 
-**11.**
-`wait()` pauses a thread until it gets a `notify()` call.
-🧠 *Like putting your hand up and waiting until the teacher calls your name.*
+---
 
-**12.**
-**Race condition**: Two threads try to access/change data at the same time → chaos.
-Fix: Use `synchronized` keyword to lock code sections.
+**10. Explain the difference between stateful and stateless servers.**
+✅
 
-**13.**
-**Method-level sync**: Lock the whole method.
-**Block-level sync**: Lock only part of the method.
-🧠 *Block-level is more flexible and efficient.*
+* **Stateless**: No memory of client (e.g., Google search)
+* **Stateful**: Stores session data (e.g., Amazon shopping cart)
+  ➡️ *Stateless forgets you; Stateful remembers your coffee order.*
 
-**14.**
-**JVM** = Converts Java bytecode into machine code at runtime.
-🧠 *It’s the translator between Java and your PC.*
+---
 
-**15.**
-**Stub**: A local object acting as a stand-in for the real remote object.
-🧠 *It’s the client’s “fake” object that forwards calls to the server.*
+**11. How does Java’s `wait()` and `notify()` work?**
+✅
 
-**Score out of 30: \_\_\_**
+* `wait()` pauses a thread
+* `notify()` wakes it up
+  ➡️ *Like raising your hand and waiting to be called on.*
+
+---
+
+**12. What is a race condition and how do you prevent it?**
+✅ *Two threads access the same data at once → unpredictable results*
+🛠️ Fix: Use `synchronized` blocks to lock the code.
+➡️ *Like two chefs trying to chop onions with one knife.*
+
+---
+
+**13. Method-level vs Block-level synchronisation in Java?**
+✅
+
+* **Method-level**: Locks the whole method
+* **Block-level**: Locks just part of code
+  ➡️ *Block-level = more control, better performance*
+
+---
+
+**14. What does the JVM do?**
+✅ **Java Virtual Machine** = Runs Java bytecode on any machine
+➡️ *Acts as the translator between your Java program and the hardware.*
+
+---
+
+**15. What is a stub in RMI and why is it important?**
+✅ *A stub is a local proxy that represents the remote object.*
+➡️ *It hides the network from the client and forwards method calls.*
 
 ---
 
 ### 🔺 SECTION 3: CHALLENGERS (5 marks each)
 
-**16.**
+**16. Compare RMI and socket-based communication.**
 
-| Feature     | RMI                          | Socket            |
-| ----------- | ---------------------------- | ----------------- |
-| Abstraction | High-level (methods/objects) | Low-level (bytes) |
-| Ease of Use | Easier                       | More manual       |
-| Data Format | Uses serialized objects      | Raw input/output  |
+| Feature     | RMI                    | Sockets               |
+| ----------- | ---------------------- | --------------------- |
+| Abstraction | High (objects/methods) | Low (raw data)        |
+| Ease of Use | Easier for Java devs   | Manual I/O            |
+| Use Case    | Call remote methods    | General data transfer |
 
-**17.**
+➡️ *RMI feels like calling a method. Sockets feel like mailing a package.*
 
-| Challenge   | Solution                       |
-| ----------- | ------------------------------ |
-| Latency     | Caching, local replicas        |
-| Failure     | Redundant servers, monitoring  |
-| Concurrency | Thread pools, locks            |
-| Security    | SSL, authentication, firewalls |
+---
 
-**18.**
-**Thread States**:
+**17. List 4 challenges in distributed computing and how to fix them.**
 
-* **New** – created but not started
-* **Runnable** – ready to run
-* **Running** – currently executing
-* **Waiting/Blocked** – paused
-* **Terminated** – finished
+| Challenge   | Fix                             |
+| ----------- | ------------------------------- |
+| Latency     | Caching, shorter routes         |
+| Failures    | Redundancy, backups, monitoring |
+| Concurrency | Thread synchronisation, locks   |
+| Security    | Encryption, authentication      |
 
-**19.**
+➡️ *Distributed = more power, more problems.*
+
+---
+
+**18. Describe the Java Thread Lifecycle.**
+✅ States:
+
+* **New** → Created
+* **Runnable** → Ready to run
+* **Running** → Actively executing
+* **Waiting/Blocked** → Paused
+* **Terminated** → Finished
+
+➡️ *Like a race: Get ready → Go → Wait → Done.*
+
+---
+
+**19. Show pseudocode to register a remote object in RMI.**
 
 ```java
-MyRemote obj = new MyRemoteImpl();
-Naming.rebind("myService", obj);
+MyService obj = new MyServiceImpl();
+Naming.rebind("MyService", obj);
 ```
 
-🧠 *Steps: Start registry → Create object → Bind it with name.*
+➡️ *Create → Bind → Wait for client*
 
-**20.**
+---
 
-* User types URL → Browser uses DNS to get IP
-* Sends **HTTP request** over TCP
-* IP routes it through **Internet Layer**
-* TCP ensures it gets there
-* Web server processes and sends back page
-* Browser renders the response
+**20. How does a browser retrieve a web page?**
 
-**Score out of 25: \_\_\_**
+1. User types URL
+2. DNS converts URL to IP
+3. Browser sends **HTTP request** using **TCP**
+4. **Internet Layer** routes packets
+5. Server responds → page rendered
+
+➡️ *It’s a handshake through the layers: App → Transport → Internet → Link.*
 
 ---
 
 ### 💡 BONUS LIGHTNING ROUND (1 mark each)
 
-**21.** **Port 80**
-**22.** *Encoding objects for transmission*
-**23.** *Network Access, Internet, Transport, Application*
-**24.** *Thread = lightweight, shares memory; Process = heavyweight, isolated*
-**25.** *Acts as an intermediary between client and actual server*
+**21. What port does HTTP use?**
+✅ **Port 80**
 
-**Score out of 5: \_\_\_**
+**22. What is marshalling?**
+✅ *Turning objects/data into a form that can be transferred*
+
+**23. What are the 4 Internet Architecture layers?**
+✅ *Network Access, Internet, Transport, Application*
+
+**24. Thread vs Process?**
+✅ *Thread = small, shares memory; Process = bigger, separate memory*
+
+**25. What’s a surrogate server?**
+✅ *A middleman server that handles requests on behalf of another*
 
 ---
 
-### ✅ TOTAL SCORE: \_\_\_ / 65
+## ✅ TOTAL MARKS: 65
 
-Let me know:
+🟢 Great Score: 55–65
+🟡 Solid Pass: 45–54
+🔴 Danger Zone: < 44 → Let me know and we’ll drill your weak points.
 
-* Where you struggled and I’ll drill down on that topic.
-* If you want a **printable version**, or **flashcard revision set** next.
-  You're nearly there, brother. 9:15 tomorrow – let’s finish strong.
+---
+
+Want this as a **Word/PDF**, a **set of flashcards**, or a **last-minute cheatsheet** image for your phone? Just say the word, brother.
